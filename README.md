@@ -6,16 +6,40 @@ Stack: Vue 3, Vite, Tailwind CSS 4, daisyUI 5 (theme based on [Clean](https://ww
 
 ## Requirements
 
-- macOS with [Homebrew](https://brew.sh)
+- macOS or Linux
 - Node.js ≥ 20 and npm
 - Chrome (AudioWorklet, microphone access)
 
 ## Install
 
+### macOS
+
 ```sh
 brew install llama.cpp
 npm install
 ```
+
+### Linux
+
+[Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux) works the same way:
+
+```sh
+brew install llama.cpp
+npm install
+```
+
+Without Homebrew, either download a prebuilt `llama-server` from the [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases) (pick the archive for your CPU or GPU, unpack it and put `llama-server` on your `PATH`), or build from source:
+
+```sh
+sudo apt install build-essential cmake libcurl4-openssl-dev   # Debian/Ubuntu
+git clone https://github.com/ggml-org/llama.cpp
+cmake -S llama.cpp -B llama.cpp/build -DCMAKE_BUILD_TYPE=Release
+cmake --build llama.cpp/build --target llama-server -j
+sudo cp llama.cpp/build/bin/llama-server /usr/local/bin/
+npm install
+```
+
+`libcurl` is required for the `-hf` flag that downloads the model from Hugging Face. For NVIDIA GPUs add `-DGGML_CUDA=ON` to the first `cmake` command.
 
 ## Run
 
