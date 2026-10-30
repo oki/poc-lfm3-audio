@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: clean --default;
+}
+
+/* "Clean" design tokens (typeui.sh/design-skills/clean) */
+@plugin "daisyui/theme" {
+  name: "clean";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #ffffff;
+  --color-base-200: #f9fafb;
+  --color-base-300: #e5e7eb;
+  --color-base-content: #111827;
+  --color-primary: #3b82f6;
+  --color-primary-content: #ffffff;
+  --color-secondary: #8b5cf6;
+  --color-secondary-content: #ffffff;
+  --color-accent: #8b5cf6;
+  --color-accent-content: #ffffff;
+  --color-neutral: #111827;
+  --color-neutral-content: #ffffff;
+  --color-info: #3b82f6;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #ffffff;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.375rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --font-sans: "Roboto", system-ui, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-mono: "Inconsolata", ui-monospace, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
