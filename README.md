@@ -4,6 +4,8 @@ Browser-based speech-to-text client. The microphone is captured in the browser, 
 
 Stack: Vue 3, Vite, Tailwind CSS 4, daisyUI 5 (theme based on [Clean](https://www.typeui.sh/design-skills/clean)).
 
+![Transcription app screenshot](docs/screenshot.png)
+
 ## Requirements
 
 - macOS or Linux
